@@ -18,9 +18,9 @@ Especially, Hamza Abbas raised a question at 11/14/2018
 Hamza's question was as follows:
 
 >This is the html of object i have captured
->`&lt;span class="select2-selection__rendered" id="select2-bot_task_action_158-container" role="textbox" aria-readonly="true" title="Email">Email&lt;/span>`
+>`<span class="select2-selection__rendered" id="select2-bot_task_action_158-container" role="textbox" aria-readonly="true" title="Email">Email</span>`
 >But when this object is created again by katalon the id changes to
->`&lt;span class="select2-selection__rendered" id="select2-bot_task_action_159-container" role="textbox" aria-readonly="true" title="Email">Email&lt;/span>`
+>`<span class="select2-selection__rendered" id="select2-bot_task_action_159-container" role="textbox" aria-readonly="true" title="Email">Email</span>`
 >The xpath stored in object repository is
 >`//*[@id="select2-bot_task_action_158-container"]`
 >But when katalon actually tries to click the object 
