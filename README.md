@@ -28,6 +28,8 @@ Hamza's question was as follows:
 >`//*[@id ="select2-bot_task_action_159-container"]`
 >what should i do?
 
+Hamza wanted to identify a span element which was last inserted into the target HTML.
+
 # Problem to solve
 
 The target HTML contains multiple `<span>` elements which are almost identical each other except the id attribute value.
@@ -39,8 +41,6 @@ The `<span>`'s id attribute value has a fixed format:
 1. it starts with a fixed string 'select2-bot_task_action_'
 2. which is followed by a digit
 3. which is followed by a fixed string '-container'
-
-Hamza wanted to identify a span element which was last inserted into the target HTML.
 
 # What we assume
 
