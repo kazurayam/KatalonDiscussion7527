@@ -1,8 +1,8 @@
-Grouping WebElements by id attribute, which has a defined format with partially changing part, and sort the id values.  
+Grouping WebElements by id attribute which has a defined format with partially changing part, and sorting the id values.  
 ============
 
 This is a [Katalon Studio](https://www.katalon.com/) project for demonstration purpose.
-You can download the zip file from the [releases] page to your PC, and run it with your Katalon Studio.
+You can download the zip file from the [releases](https://github.com/kazurayam/KatalonDiscussion7527/releases) page to your PC, and run it with your Katalon Studio.
 
 This project was developed with Katalon Studio version 5.7.1.
 
@@ -18,14 +18,14 @@ Especially, Hamza Abbas raised a question at 11/14/2018
 Hamza's question was as follows:
 
 >This is the html of object i have captured
->"<span class="select2-selection__rendered" id="select2-bot_task_action_158-container" role="textbox" aria-readonly="true" title="Email">Email</span>"
+>`&lt;span class="select2-selection__rendered" id="select2-bot_task_action_158-container" role="textbox" aria-readonly="true" title="Email">Email&lt;/span>`
 >But when this object is created again by katalon the id changes to
->"<span class="select2-selection__rendered" id="select2-bot_task_action_159-container" role="textbox" aria-readonly="true" title="Email">Email</span>"
+>`&lt;span class="select2-selection__rendered" id="select2-bot_task_action_159-container" role="textbox" aria-readonly="true" title="Email">Email&lt;/span>`
 >The xpath stored in object repository is
->//*[ @ id = "select2-bot_task_action_158-container"]
+>`//*[@id="select2-bot_task_action_158-container"]`
 >But when katalon actually tries to click the object 
 >xpath has become
->// * [ @ id = "select2-bot_task_action_159-container"]
+>`//*[@id ="select2-bot_task_action_159-container"]`
 >what should i do?
 
 # Problem to solve
