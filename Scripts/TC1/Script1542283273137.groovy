@@ -14,9 +14,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
  */
 class HamzasIdentifier {
 	
+	// use Regular Expression to parse the id value string
 	private static final Pattern p = Pattern.compile('select2-bot_task_action_(\\d+)-container')
+	
 	private String idValue_ = null
 	private Integer sequenceNumber_ = 0
+	
 	HamzasIdentifier(String idValue) {
 		idValue_ = idValue.trim()
 		Matcher m = p.matcher(idValue_)
@@ -35,20 +38,21 @@ class HamzasIdentifier {
 	
 	@Override
 	boolean equals(Object obj) {
-		if (obj == null)
+		if (obj == null) {
 			return false
-		if (!(obj instanceof HamzasIdentifier))
+		}
+		if (!(obj instanceof HamzasIdentifier)) {
 			return false
-		if (obj == this)
+		}
+		if (obj == this) {
 			return true
-		return this.getSequenceNumber() == ((HamzasIdentifier)obj).getSequenceNumber()
+		}
+		return idValue_ == ((HamzasIdentifier)obj).idValue_
 	}
-	
 	@Override
 	int hashCode() {
-		return this.getSequenceNumber()
+		return idValue_
 	}
-	
 	@Override
 	String toString() {
 		return idValue_
@@ -71,7 +75,7 @@ for (WebElement span : spans) {
 	WebUI.comment(">>> id is ${id}, id.getSequenceNumber() is ${id.getSequenceNumber()}")
 }
 
-// sort the list of HamzasIdentifiers in reverseOrder
+// sort the list of HamzasIdentifiers in descending order of the sequenceNumber_
 Collections.sort(
 	idList,
 	new Comparator<HamzasIdentifier>() {
