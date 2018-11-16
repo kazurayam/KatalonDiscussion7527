@@ -62,12 +62,13 @@ WebUI.navigateToUrl('http://demoaut-mimic.kazurayam.com/testbed_7527.html')
 // select the group of <span> elements with id attribute which starts with string 'select2-bot_task_action_'
 List<WebElement> spans = WebUI.findWebElements(findTestObject('Object Repository/Page_Katalon Discussion 7527/span_Email'), 10)
 
+WebUI.comment("before sorting:")
 List<HamzasIdentifier> idList = new ArrayList<HamzasIdentifier>()
 for (WebElement span : spans) {
 	String idStr = span.getAttribute("id")
 	HamzasIdentifier id = new HamzasIdentifier(idStr)
 	idList.add(id)
-	//WebUI.comment(">>> id is ${id}, id.getSequenceNumber() is ${id.getSequenceNumber()}")
+	WebUI.comment(">>> id is ${id}, id.getSequenceNumber() is ${id.getSequenceNumber()}")
 }
 
 // sort the list of HamzasIdentifiers in reverseOrder
@@ -81,9 +82,10 @@ Collections.sort(
 	}
 	);
 
-//for (HamzasIdentifier id : idList) {
-//	WebUI.comment("<<< id is ${id}, id.getSequenceNumber() is ${id.getSequenceNumber()}")
-//}
+WebUI.comment("after sorting:")
+for (HamzasIdentifier id : idList) {
+	WebUI.comment("<<< id is ${id}, id.getSequenceNumber() is ${id.getSequenceNumber()}")
+}
 
 // pick up the id of the <span id="${theLatest}"> which has the largest sequenceNumber, 
 // possibly the element was last created
